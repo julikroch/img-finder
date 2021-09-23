@@ -1,5 +1,4 @@
-import React from 'react'
-import Img from './Img'
+import Img from './Img/Img'
 
 const ImageList = (props: { images: any }) => {
     return (

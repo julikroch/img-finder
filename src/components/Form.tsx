@@ -15,16 +15,15 @@ const Form = (props: { saveSearch: any }) => {
         }
         saveError(false)
         props.saveSearch(topic)
-
     }
+
     return (
         <form
             onSubmit={searchImg}
         >
-
             {error && <Error text='All fields are required' />}
-            <div className="row">
-                <div className="form-group col-md-8">
+            <div className='row'>
+                <div className='form-group col-md-8'>
                     <input
                         type='text'
                         className='form-control form-control-lg'
@@ -32,11 +31,11 @@ const Form = (props: { saveSearch: any }) => {
                         onChange={e => saveTopic(e.target.value)}
                     />
                 </div>
-                <div className="form-group col-md-4">
+                <div className='form-group col-md-4'>
                     <input
                         type='submit'
                         className='btn btn-lg btn-danger btn-block'
-                        value='Find'
+                        value='FIND'
                     />
                 </div>
             </div>
