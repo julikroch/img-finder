@@ -1,4 +1,3 @@
-
 import './Img.css'
 
 const Img = (props: { img: any }) => {
