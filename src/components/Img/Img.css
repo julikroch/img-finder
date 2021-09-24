@@ -8,6 +8,7 @@ img.card-img-top {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  padding: 0;
 }
 
 .card-footer a {
