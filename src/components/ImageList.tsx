@@ -2,15 +2,13 @@ import Img from './Img/Img'
 
 const ImageList = (props: { images: any }) => {
     return (
-        <div>
-            <div className="col-12 p-5 row">
-                {props.images.map((img: any) => (
-                    <Img
-                        key={img.id}
-                        img={img}
-                    />
-                ))}
-            </div>
+        <div className="col-12 p-5 row">
+            {props.images.map((img: any) => (
+                <Img
+                    key={img.id}
+                    img={img}
+                />
+            ))}
         </div>
     )
 }

@@ -9,13 +9,14 @@ function App() {
   const [page, savePage] = useState(1)
   const [totalPages, saveTotalPages] = useState(1)
 
+  const imgPerPage: number = 12
+  const key: string = '23531430-8fa3c08fd34c23b1cc7bec1dc'
+
   useEffect(() => {
 
     const APIConsult = async () => {
       if (search === '') return
 
-      const imgPerPage: number = 12
-      const key: string = '23531430-8fa3c08fd34c23b1cc7bec1dc'
       const url: string = `https://pixabay.com/api/?key=${key}&q=${search}&per_page=${imgPerPage}&page=${page}`
 
       const response = await fetch(url)
@@ -37,18 +38,14 @@ function App() {
   const prevPage = () => {
     const newPage = page - 1
     if (newPage === 0) return
-
     savePage(newPage)
   }
 
   const nextPage = () => {
     const newPage = page + 1
     if (newPage > totalPages) return
-
     savePage(newPage)
   }
-
-  console.log(page)
 
   return (
     <div className='container'>
