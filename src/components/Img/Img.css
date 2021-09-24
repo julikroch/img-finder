@@ -3,5 +3,13 @@ img.card-img-top {
 }
 
 .card-footer {
-  background-color: #fff;
+  background-color: #eee;
+  border: none;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.card-footer a {
+  margin: 0.25rem;
 }

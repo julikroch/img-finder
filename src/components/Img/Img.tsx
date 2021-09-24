@@ -4,6 +4,8 @@ const Img = (props: { img: any }) => {
 
     const { largeImageURL, likes, previewURL, tags, views } = props.img
 
+    console.log(props.img)
+
     return (
         <div className='col-12 col-sm-6 col-md-4 col-lg-3 mb-4'>
             <div className='card'>
@@ -20,6 +22,10 @@ const Img = (props: { img: any }) => {
                     rel='noopener noreferrer'
                     className='btn btn-primary btn-block'
                 > View Image</a>
+
+                <div className="fb-share-button" data-href={largeImageURL} data-layout="button_count" data-size="small">
+                    <a target="_blank" rel="noreferrer" href={`https://www.facebook.com/sharer/sharer.php?u=${largeImageURL}&amp;src=sdkpreparse`} className="btn btn-primary btn-block fb-xfbml-parse-ignore">Share on Facebook!</a>
+                </div>
             </div>
         </div>
     )
